@@ -6,7 +6,7 @@
 
 ## ✨ Features
 
-- Replaces `"..."` with typographic quotes like `„..."`, `“…”`, or `« ... »`
+- Replaces `"..."` with typographic quotes like `„...“`, `“…”`, or `« ... »`
 - Leaves all HTML markup and attributes untouched
 - Simple and safe – no risky regular expressions
 - Supports configurable quote styles:
