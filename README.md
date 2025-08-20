@@ -10,7 +10,7 @@
 - Leaves all HTML markup and attributes untouched
 - Simple and safe – no risky regular expressions
 - Supports configurable quote styles:
-  - **German**: „..."
+  - **German**: „...“
   - **English**: “...”
   - **French**: « ... »
 
