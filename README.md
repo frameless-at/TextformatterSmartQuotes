@@ -60,4 +60,4 @@ This module is simple by design, but open for improvements (e.g. nested quotes, 
 
 ---
 
-**Developed by [frameless Media](https://framelessmedia.io)**
+**Developed by [frameless Media](https://frameless.at)**
