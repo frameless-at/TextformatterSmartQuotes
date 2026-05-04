@@ -3,7 +3,7 @@
 /**
  * ProcessWire TextformatterSmartQuotes
  *
- * Replaces straight double quotes "..." with typographic quotes („…“, “…” or «…»),
+ * Replaces straight double quotes "..." with typographic quotes („…“, „…”, “…” or «…»),
  * but only in visible text content, leaving HTML tags and attributes untouched.
  *
  * @author frameless Media
@@ -14,8 +14,8 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 	public static function getModuleInfo() {
 		return [
 			'title' => 'Textformatter Smart Quotes',
-			'version' => 1,
-			'summary' => 'Replaces straight quotes "..." with typographic quotes („...“, “...”, or «...»), in visible text only.',
+			'version' => 1.1,
+			'summary' => 'Replaces straight quotes "..." with typographic quotes („...“, „...”, “...”, or «...»), in visible text only.',
 			'author' => 'frameless Media',
 			'autoload' => false,
 			'singular' => true,
@@ -31,6 +31,7 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 		$field->label = 'Quote style';
 		$field->options = [
 			'german' => 'German: „...”',
+			'polish' => 'Polish: „...”',
 			'english' => 'English: “...”',
 			'french' => 'French: « ... »',
 		];
@@ -47,6 +48,7 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 		// Define opening and closing quote chars based on selected style
 		$quotes = [
 			'german' => ['open' => '„', 'close' => '“'],
+			'polish' => ['open' => '„', 'close' => '”'],
 			'english' => ['open' => '“', 'close' => '”'],
 			'french' => ['open' => '« ', 'close' => ' »'], // French uses non-breaking spaces
 		];

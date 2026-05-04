@@ -6,11 +6,12 @@
 
 ## ✨ Features
 
-- Replaces `"..."` with typographic quotes like `„...“`, `“…”`, or `« ... »`
+- Replaces `"..."` with typographic quotes like `„...“`, `„...”`, `“…”`, or `« ... »`
 - Leaves all HTML markup and attributes untouched
 - Simple and safe – no risky regular expressions
 - Supports configurable quote styles:
   - **German**: „...“
+  - **Polish**: „...”
   - **English**: “...”
   - **French**: « ... »
 
@@ -25,6 +26,7 @@ We needed a way to convert straight quotes into proper typographic ones in conte
 ```
 
 Most regex-based solutions failed, either:
+
 - Replacing quotes inside HTML attributes (which breaks markup), or
 - Missing valid quotes in visible content
 
