@@ -13,6 +13,7 @@
   - **German**: „...“
   - **English**: “...”
   - **French**: « ... »
+  - **Custom**: define your own opening and closing characters
 
 ---
 
@@ -50,6 +51,8 @@ This module solves that cleanly by operating only on the **visible text**, ignor
 
 Go to **Modules → Configure → Textformatter Smart Quotes**  
 Select your preferred **quote style** from the dropdown.
+
+If none of the presets fit, choose **Custom** — two additional text fields will appear where you can define your own opening and closing characters. Both fields are required when Custom is selected.
 
 ---
 
