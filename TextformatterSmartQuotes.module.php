@@ -14,7 +14,7 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 	public static function getModuleInfo() {
 		return [
 			'title' => 'Textformatter Smart Quotes',
-			'version' => 1,
+			'version' => '1.1.0',
 			'summary' => 'Replaces straight quotes "..." with typographic quotes („...“, “...”, or «...»), in visible text only.',
 			'author' => 'frameless Media',
 			'autoload' => false,
