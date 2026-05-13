@@ -33,11 +33,32 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 			'german' => 'German: „...”',
 			'english' => 'English: “...”',
 			'french' => 'French: « ... »',
+			'custom' => 'Custom (define characters below)',
 		];
 		$field->defaultValue = 'german';
 		$field->value = $data['quoteStyle'] ?? 'german';
-
 		$inputfields->add($field);
+
+		$field = wire('modules')->get('InputfieldText');
+		$field->name = 'customOpen';
+		$field->label = 'Custom opening quote';
+		$field->description = 'Character(s) used as opening quote when style is set to Custom.';
+		$field->value = $data['customOpen'] ?? '';
+		$field->showIf = 'quoteStyle=custom';
+		$field->requiredIf = 'quoteStyle=custom';
+		$field->columnWidth = 50;
+		$inputfields->add($field);
+
+		$field = wire('modules')->get('InputfieldText');
+		$field->name = 'customClose';
+		$field->label = 'Custom closing quote';
+		$field->description = 'Character(s) used as closing quote when style is set to Custom.';
+		$field->value = $data['customClose'] ?? '';
+		$field->showIf = 'quoteStyle=custom';
+		$field->requiredIf = 'quoteStyle=custom';
+		$field->columnWidth = 50;
+		$inputfields->add($field);
+
 		return $inputfields;
 	}
 
@@ -49,6 +70,7 @@ class TextformatterSmartQuotes extends Textformatter implements ConfigurableModu
 			'german' => ['open' => '„', 'close' => '“'],
 			'english' => ['open' => '“', 'close' => '”'],
 			'french' => ['open' => '« ', 'close' => ' »'], // French uses non-breaking spaces
+			'custom' => ['open' => $this->customOpen, 'close' => $this->customClose],
 		];
 		$open = $quotes[$style]['open'] ?? '„';
 		$close = $quotes[$style]['close'] ?? '“';
